@@ -1,0 +1,1 @@
+alert("Hello everyone! This is lesson 1 of JavaScript.");

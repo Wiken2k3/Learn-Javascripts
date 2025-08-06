@@ -1,7 +1,7 @@
-var a = true;
-var b = false;
-var c = a || b;
-var d = b && c;
+var a = true;  // a = true
+var b = false; // b = false
+var c = a || b; //c= true (1 trong 2 true là true)
+var d = b && c; // d= false (1 trong 2 false là false)
 
 console.log(c, d); // Output: true false
 

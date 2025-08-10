@@ -21,3 +21,7 @@ var myObject = {
 }
 
 
+//hoisting (có thể gọi trước khi khai báo) :Declaration function
+// không hoisting :Expression functions
+
+

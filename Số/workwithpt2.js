@@ -34,3 +34,41 @@ Tạo hàm isNumber
 Hàm isNumber có 1 tham số đặt tên là value
 isNumber(value) trả về true khi value có kiểu số, ngược lại trả về false
 isNumber(NaN) cần trả về false */
+
+
+/** Đề bài nói gì?
+Đề yêu cầu:
+Viết một hàm tên là isNumber dùng để:
+Kiểm tra xem một giá trị có phải là số hợp lệ (number) không.
+Nếu đúng là số → trả về true
+Nếu không phải số → trả về false
+❗ Nhưng có một điểm dễ sai:
+Trong JavaScript, NaN (Not a Number – "không phải số") lại có kiểu là number! 😮
+console.log(typeof NaN); // 'number'
+Vì vậy nếu bạn chỉ kiểm tra kiểu như sau:
+function isNumber(value) {
+    return typeof value === 'number';
+}
+Thì kết quả sẽ sai:
+console.log(isNumber(NaN)); // ❌ Trả về true → sai!
+🧠 2. Hướng dẫn cách làm đúng – TỪNG BƯỚC
+✅ Bước 1: Kiểm tra kiểu dữ liệu là numbe
+typeof value === 'number'
+→ Kiểm tra xem value có đúng là kiểu số không.
+
+✅ Bước 2: Loại trừ trường hợp đặc biệt là NaN
+Ta dùng:
+!isNaN(value)
+→ isNaN() sẽ trả về true nếu giá trị là NaN.
+
+→ Dấu ! (phủ định) sẽ giúp loại bỏ NaN.
+
+✅ Bước 3: Gộp cả 2 điều kiện lại
+Viết hàm hoàn chỉnh:
+function isNumber(value) {
+    return typeof value === 'number' && !isNaN(value);
+}
+🔍 Giải thích siêu dễ nhớ:
+Điều kiện	Ý nghĩa
+typeof value === 'number'	Là kiểu số (number)
+!isNaN(value)	Không phải NaN (giá trị hợp lệ) */

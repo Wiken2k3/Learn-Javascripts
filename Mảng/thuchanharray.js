@@ -4,4 +4,4 @@ var numbers = new Array (
     234,
     567,
 );
-console.log(numbers)        //Tạo array numbers có ít nhất 3 phần tử là số
+console.log(numbers)        //Tạo array numbers có ít nhất 3 phần tử là sốs

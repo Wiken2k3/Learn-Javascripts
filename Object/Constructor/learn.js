@@ -57,6 +57,8 @@ user.comment = "Thật là hay";
 console.log(author.getName());  // Tuan Tran
 console.log(user.getName());    // Duc Tran
 
+
+
 //Chuyển thành Express function 
 
 var User= function(firstName, lastName, avatar) { 

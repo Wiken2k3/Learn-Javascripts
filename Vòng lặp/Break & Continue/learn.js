@@ -1,0 +1,1 @@
+//break (thoát khỏi vòng lặp) và Continue (bỏ qua một vài đoạn) của vòng lặp

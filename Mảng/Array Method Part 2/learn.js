@@ -2,8 +2,8 @@
     forEach()   //duyệt qua phần tử của mảng
     every()     //Dùng để kiểm tra tất cả phần tử thoả mãn 1 điều kiện nào đó
     some()      //CHỉ cần 1 thoả mãn điều kiện đó rồi sẽ ngừng lại vòng lặp
-    find()      //tìm kiếm 
-    filter()
+    find()      //tìm kiếm phần tử thoả mãn điều kiện và LUÔN TRẢ VỀ 1 ĐỐI TƯỢNG ,nếu thoả mãn điều kiện thì vòng lặp kết thúc
+    filter()    //giống find và trả về TẤT CẢ ĐỐI TƯỢNG hợp lệ
     map()
     reduce()
  */
@@ -33,6 +33,11 @@ var courses = [
         id: 5,
         name: 'ReactJS',
         coin: 500
+    },
+    {
+        id: 6,
+        name: 'Figma',
+        coin: 200
     }
 ];
 
@@ -68,9 +73,17 @@ console.log(isFree);
 
 
 
-//some()   
+//find()    : LUÔN TRẢ VỀ 1 ĐỐI TƯỢNG
 var course = courses.find(function(course, index){     
     return course.name === 'HTML';    //nếu hàm nào return là true thì sẽ gán ngược vào vòng lặp đó rồi sẽ kết thúc
 })              
 
-console.log(course);
+console.log(course);  //trả về phần tửu phù hợp với điều kiện  , nếu không có trả về undefined
+
+
+// filter()    : giống find và trả về TẤT CẢ ĐỐI TƯỢNG hợp lệ
+var listCourse = courses.filter(function(course, index){     
+    return course.name === 'Figma';    
+});              
+
+console.log(listCourse);    //{id: 4, name: 'Figma', coin: 400} {id: 6, name: 'Figma', coin: 200}

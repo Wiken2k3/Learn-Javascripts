@@ -98,3 +98,70 @@ Bạn đang áp dụng đúng kiến thức filter().
 Chỉ cần kiểm tra điều kiện trong callback (sport.like > 5) là đủ. */
 
 
+
+
+
+
+
+
+
+
+
+
+
+/**🧠 TƯ DUY LOGIC BÀI NÀY:
+🎯 Mục tiêu:
+
+Tìm ra các môn thể thao có like > 5 từ một mảng chứa nhiều môn thể thao.
+
+🚀 Ý tưởng:
+
+Có một mảng gồm nhiều đối tượng, mỗi đối tượng là 1 môn thể thao (gồm name và like).
+
+Mình muốn chọn ra những môn mà người ta thích nhiều, tức là có like > 5.
+
+Để làm điều này, mình sẽ dùng phương thức filter():
+
+filter() sẽ duyệt qua từng phần tử trong mảng.
+
+Với mỗi phần tử, mình kiểm tra điều kiện like > 5.
+
+Nếu đúng thì giữ lại phần tử đó.
+
+Kết quả là một mảng mới chỉ chứa những môn có like > 5.
+
+📦 Hình dung như cái rổ lọc
+
+Hãy tưởng tượng mảng ban đầu là một rổ đựng các quả bóng (mỗi quả là một môn thể thao).
+
+Bạn cầm một cái rây lọc (filter) và quy định:
+
+"Chỉ giữ lại quả nào có số điểm thích (like) lớn hơn 5."
+
+Bạn đổ từng quả vào rây:
+
+Bóng rổ (like: 6) → Giữ lại ✅
+
+Bơi lội (like: 5) → Không giữ ❌
+
+Bóng đá (like: 10) → Giữ lại ✅
+
+→ Kết quả sau khi lọc: 2 quả bóng được giữ lại.
+
+💻 Code dễ hiểu hơn với chú thích:
+function getMostFavoriteSport(sports) {
+    // Lọc ra các môn thể thao có số like lớn hơn 5
+    return sports.filter(function(sport) {
+        // sport là từng môn thể thao trong mảng
+        // Nếu sport.like > 5 thì filter sẽ giữ lại môn này trong mảng mới
+        return sport.like > 5;
+    });
+}
+
+📌 Kết luận:
+
+filter() giúp bạn lọc mảng theo điều kiện.
+
+Bạn chỉ cần viết điều kiện rõ ràng trong hàm.
+
+Trong bài này, điều kiện là: like > 5 */

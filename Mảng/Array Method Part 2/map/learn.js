@@ -64,3 +64,49 @@ function courseHandler(course, index){     //khi gọi lại function thì còn 
 
 var newCourses = courses.map(courseHandler);      
 console.log(newCourses);
+
+
+
+//vd:
+
+
+var courses = [
+    {                                       //chạy vào ông thứ nhất và dùng nguyên element này gọi ngược vào function chúng ta truyền vào nên chúng ta sẽ nhận được 1 tham số ở trong ngoặc
+        id: 1,
+        name: 'HTML',
+        coin: 250
+    },
+    {
+        id: 2,
+        name: 'CSS',
+        coin: 0
+    },
+    {
+        id: 3,
+        name: 'Javascript',
+        coin: 0
+    },
+    {
+        id: 4,
+        name: 'Figma',
+        coin: 400
+    },
+    {
+        id: 5,
+        name: 'ReactJS',
+        coin: 500
+    },
+    {
+        id: 6,
+        name: 'Figma',
+        coin: 200
+    }
+];
+function courseHandler(course){
+    // console.log(course)           
+    return `<h2>${course.name}</h2>`;
+};
+
+var newCourses = courses.map(courseHandler);      
+console.log(newCourses.join(''));       //dùng để hiện thị view trên website
+

@@ -66,3 +66,28 @@ var totalCoin = courses.reduce(coinHandler, 0);
 
 
 
+//vd1:
+var i = 0;
+function coinHandler(accumulator, currentValue ,currentIndex, originArray){    //trả về tham số accumulator (biến lưu trữ) , giá trị hiện tại (currentValue) , chỉ mục hiện tại (currentIndex) và mảng gốc (chính là courses của reduce ở dưới)
+    i++;
+    console.log(i);
+}
+
+
+var totalCoin = courses.reduce(coinHandler, 0);       
+//nhận 2 đối số truyền vào ,thứ nhất function (bắt buộc), đối số thứ 2 là giá trị khởi tạo (để khởi tạo biến lưu trữ của hàm reduce )
+
+//vd2:
+var i = 0;
+function coinHandler(accumulator, currentValue ,currentIndex, originArray){    //trả về tham số accumulator (biến lưu trữ) , giá trị hiện tại (currentValue) , chỉ mục hiện tại (currentIndex) và mảng gốc (chính là courses của reduce ở dưới)
+    i++;
+    console.table({
+        'Lượt chạy': i,
+        'Biến tích trữ':accumulator
+    });
+}
+
+
+var totalCoin = courses.reduce(coinHandler, 0);       
+//nhận 2 đối số truyền vào ,thứ nhất function (bắt buộc), đối số thứ 2 là giá trị khởi tạo (để khởi tạo biến lưu trữ của hàm reduce )
+

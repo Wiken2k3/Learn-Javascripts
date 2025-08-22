@@ -119,10 +119,13 @@ var totalCoin = courses.reduce(coinHandler, 0);
 
 //Áp dụng
 var i = 0;
+
+
 function coinHandler(accumulator, currentValue ,currentIndex, originArray){  
     // console.table({
     //     'Lượt chạy': i,
-    //     'Biến tích trữ':accumulator
+    //     'Biến tích trữ':accumulator,
+    //     'Giá khoá học': currentValue.coin,
     // });
     // console.log(currentValue);
     return accumulator + currentValue.coin;
@@ -130,5 +133,39 @@ function coinHandler(accumulator, currentValue ,currentIndex, originArray){
 
 
 var totalCoin = courses.reduce(coinHandler, 0);       
+console.log(totalCoin);
+
+
+
+//Chi tiết :
+var i = 0;
+
+
+function coinHandler(accumulator, currentValue ,currentIndex, originArray){  
+    i++;
+    var total = accumulator + currentValue.coin;
+
+    console.table({
+        'Lượt chạy': i,
+        'Biến tích trữ':accumulator,
+        'Giá khoá học': currentValue.coin,
+        'Tích trữ được ':total
+    });
+    console.log(currentValue);
+    return total;
+}
+
+
+var totalCoin = courses.reduce(coinHandler, 0);       
+console.log(totalCoin);
+
+
+
+//Áp dụng ngắn gọn reduce:
+
+var totalCoin = courses.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue.coin;
+}, 0);
+
 console.log(totalCoin);
 

@@ -33,6 +33,7 @@ var courses = [
         coin: 200
     }
 ];
+
 //Biến lưu trữ
 var totalCoin = 0;
 
@@ -49,6 +50,19 @@ console.log(totalCoin);
 //1.Dễ hiểu
 //2.Ngắn gọn hơn
 //3.Hiệu năng
+//4. Đẹp mắt hơn
+
+
+//vd1:
+var i = 0;
+function coinHandler(accumulator, currentValue ,currentIndex, originArray){    //trả về tham số accumulator (biến lưu trữ) , giá trị hiện tại (currentValue) , chỉ mục hiện tại (currentIndex) và mảng gốc (chính là courses của reduce ở dưới)
+    i++;
+    console.log(i);
+}
+
+
+var totalCoin = courses.reduce(coinHandler, 0);       
+//nhận 2 đối số truyền vào ,thứ nhất function (bắt buộc), đối số thứ 2 là giá trị khởi tạo (để khởi tạo biến lưu trữ của hàm reduce )
 
 
 

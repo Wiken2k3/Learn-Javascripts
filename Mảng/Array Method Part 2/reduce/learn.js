@@ -33,8 +33,22 @@ var courses = [
         coin: 200
     }
 ];
+//Biến lưu trữ
 var totalCoin = 0;
+
+//Lặp qua các phần tử
  for (var course of courses){
-    totalCoin = course.coin;
- }
+    //thực hiện biến lưu trữ
+    totalCoin += course.coin;
+}
+
 console.log(totalCoin);
+
+
+//Áp dụng reduce 
+//1.Dễ hiểu
+//2.Ngắn gọn hơn
+//3.Hiệu năng
+
+
+
